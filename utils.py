@@ -67,35 +67,6 @@ def train(X_train,Y_train,validation_split,model,epoch,batch_size):
     tb_callback=keras.callbacks.TensorBoard(log_dir='./graph',write_images=True)
     history = model.fit(X_train, Y_train, validation_split=validation_split, epochs=epoch, batch_size=batch_size,
                         callbacks=[tb_callback])
-   # history=model.fit(X_train,Y_train,validation_split= validation_split,epochs=epoch,batch_size=batch_size,callbacks=[PlotLossesKeras()])
-    # list all data in history
-    # print(history.history.keys())
-    # working_dir = os.getcwd()
-    # newdir = working_dir + '\\learning_curve\\' + time.asctime(time.localtime()).replace(':','_')
-    # if not os.path.exists(newdir):
-    #     os.makedirs(newdir)
-    # os.chdir(newdir)
-    # # summarize history for accuracy
-    # plt.figure(1)
-    # plt.plot(history.history['acc'])
-    # plt.plot(history.history['val_acc'])
-    # plt.title('model accuracy')
-    # plt.ylabel('accuracy')
-    # plt.xlabel('epoch')
-    # plt.legend(['train', 'test'], loc='upper left')
-    # plt.savefig('accuracy.png')
-    # plt.show(block=False)
-    # # summarize history for loss
-    # plt.figure(2)
-    # plt.plot(history.history['loss'])
-    # plt.plot(history.history['val_loss'])
-    # plt.title('model loss')
-    # plt.ylabel('loss')
-    # plt.xlabel('epoch')
-    # plt.legend(['train', 'test'], loc='upper left')
-    # plt.savefig('loss.png')
-    # plt.show(block=False)
-    # os.chdir(working_dir)
     return True
 
 def save_model(model):
