@@ -8,5 +8,5 @@ batch_size=16
 X_train,Y_train,X_test,Y_test,classes=cnn.load_dataset(dataser_dir,image_size=image_size,test_size=0.2)
 cat_dog_model=define_model(input_shape,num_classes)
 train(X_train,Y_train,validation_split=0.1,model= cat_dog_model ,epoch= epoch,batch_size= batch_size)
-test_model(cat_dog_model, X_test,Y_test)
+test_model(cat_dog_model, X_test,Y_test)#use this function seperately for testing on an new set of images
 save_model(cat_dog_model)
