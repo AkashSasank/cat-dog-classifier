@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 import keras
 import matplotlib.pyplot as plt
 import time
-from livelossplot import  PlotLossesKeras
+
 
 
 keras.backend.set_image_dim_ordering('tf')
